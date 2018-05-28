@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatCardModule, MatToolbarModule, MatButtonModule,
-MatIconModule } from '@angular/material';
+import {
+  MatCardModule, MatToolbarModule, MatButtonModule,
+  MatIconModule, MatFormFieldModule, MatInputModule
+} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -12,7 +14,9 @@ MatIconModule } from '@angular/material';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: []
 })

@@ -1,0 +1,9 @@
+@import 'theme/_dimens.scss';
+@import 'theme/_layout.scss';
+@import 'theme/_theme.scss';
+
+.fab-position{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

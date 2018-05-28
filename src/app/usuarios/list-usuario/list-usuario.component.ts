@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../services/usuario.model';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-usuario',
@@ -10,7 +11,7 @@ export class ListUsuarioComponent implements OnInit {
 
   data: Usuario[] = [];
 
-  constructor() {
+  constructor(private router: Router, private route: ActivatedRoute) {
 
     for (let i = 0; i < 10; i++) {
       this.data.push({
@@ -25,6 +26,10 @@ export class ListUsuarioComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  goToAdd() {
+    this.router.navigate(['agregar'], { relativeTo: this.route });
   }
 
 }

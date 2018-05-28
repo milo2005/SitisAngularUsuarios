@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule
   ],
-  declarations: [LoginComponent, NotFoundComponent]
+  declarations: [LoginComponent, NotFoundComponent],
+  exports: [SharedModule]
 })
 export class CoreModule { }

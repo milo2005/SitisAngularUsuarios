@@ -1,0 +1,80 @@
+body { margin: 0; }
+
+$container-margin-xs: 10px;
+$container-margin-sm: 20px;
+$container-margin-md: 90px;
+$container-margin-lg: 140px;
+$container-margin-xlg: 180px;
+
+$container-margin-toolbar : 16px;
+
+.container, .container-toolbar{
+    margin-left: $container-margin-xs;
+    margin-right: $container-margin-xs;
+    padding: 0px;
+    margin: 0px;
+}
+
+.section{
+    margin-top: 10px;
+}
+
+@media only screen and (min-width:600px){
+    .container{
+        margin-left: $container-margin-sm;
+        margin-right: $container-margin-sm;        
+    }
+    
+    .container-toolbar{
+        margin-left: $container-margin-sm - $container-margin-toolbar;
+        margin-right: $container-margin-sm - $container-margin-toolbar;
+    }
+    .section{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width:960px){
+    .container{
+        margin-left: $container-margin-md;
+        margin-right: $container-margin-md;        
+    }
+    
+    .container-toolbar{
+        margin-left: $container-margin-md - $container-margin-toolbar;
+        margin-right: $container-margin-md - $container-margin-toolbar;
+    }
+
+    .section{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width:1280px){
+    .container{
+        margin-left: $container-margin-lg;
+        margin-right: $container-margin-lg;        
+    }
+    
+    .container-toolbar{
+        margin-left: $container-margin-lg - $container-margin-toolbar;
+        margin-right: $container-margin-lg - $container-margin-toolbar;
+    }
+
+    .section{
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width:1920px){
+    .container{
+        margin-left: $container-margin-xlg;
+        margin-right: $container-margin-xlg;        
+    }
+    
+    .container-toolbar{
+        margin-left: $container-margin-xlg - $container-margin-toolbar;
+        margin-right: $container-margin-xlg - $container-margin-toolbar;
+    }
+    
+}

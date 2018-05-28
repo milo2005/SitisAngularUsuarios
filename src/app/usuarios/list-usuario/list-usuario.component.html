@@ -1,11 +1,9 @@
-<mat-toolbar color="primary">Usuarios</mat-toolbar>
-
 <div fxLayout="row wrap" fxLayoutGap="20px">
 
   <div fxFlex="0 0 calc(100% - 20px)" fxFlex.md="0 0 calc(50% - 20px)" 
   fxFlex.gt-md="0 0 calc(33% - 20px)" *ngFor="let u of data">
 
-    <mat-card>
+    <mat-card class="mb-small">
       <mat-card-header>
         <mat-card-title>{{u.nombre}}</mat-card-title>
         <mat-card-subtitle>{{u.email}}</mat-card-subtitle>
@@ -22,7 +20,7 @@
 </div>
 
 <div class="fab-position">
-  <button mat-fab>
+  <button mat-fab (click)="goToAdd()">
       <mat-icon>add</mat-icon>
   </button>
 </div>

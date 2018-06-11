@@ -6,13 +6,16 @@ import { RouterModule } from '@angular/router';
 
 import {
   MatCardModule, MatToolbarModule, MatButtonModule,
-  MatIconModule, MatFormFieldModule, MatInputModule
+  MatIconModule, MatFormFieldModule, MatInputModule,
+  MatDialogModule
 } from '@angular/material';
+import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MatDialogModule
   ],
   exports: [FlexLayoutModule,
     MatCardModule,
@@ -21,9 +24,12 @@ import {
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    DeleteDialogComponent
   ],
-  declarations: []
+  declarations: [DeleteDialogComponent],
+  entryComponents: [DeleteDialogComponent]
 })
 export class SharedModule { }

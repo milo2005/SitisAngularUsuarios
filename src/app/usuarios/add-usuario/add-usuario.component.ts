@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../services/usuario.model';
+import { NavService } from '../../core/services/nav.service';
 
 @Component({
   selector: 'app-add-usuario',
@@ -10,7 +11,9 @@ export class AddUsuarioComponent implements OnInit {
 
   usuario: Usuario = { email: '', img: '', nombre: '', password: '' };
 
-  constructor() { }
+  constructor(nav: NavService) {
+    nav.title = 'Agregar usuario';
+  }
 
   ngOnInit() {
   }

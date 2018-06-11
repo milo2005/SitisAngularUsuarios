@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../services/usuario.model';
 import { Router, ActivatedRoute } from '@angular/router';
+import { NavService } from '../../core/services/nav.service';
 
 @Component({
   selector: 'app-list-usuario',
@@ -11,7 +12,9 @@ export class ListUsuarioComponent implements OnInit {
 
   data: Usuario[] = [];
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, nav: NavService) {
+
+    nav.title = 'Usuarios';
 
     for (let i = 0; i < 10; i++) {
       this.data.push({

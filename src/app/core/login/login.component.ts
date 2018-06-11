@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Credentials } from '../services/login.service';
+import { NavService } from '../services/nav.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,9 @@ export class LoginComponent implements OnInit {
 
   credentials: Credentials = { password: '', email: '' };
 
-  constructor() { }
+  constructor(nav: NavService) {
+    nav.title = 'Iniciar Sesion';
+  }
 
   ngOnInit() {
   }

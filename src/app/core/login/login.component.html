@@ -1,3 +1,17 @@
-<p>
-  login works!
-</p>
+<div class="section">
+  <div fxLayout="row wrap">
+
+    <mat-form-field appearance="outline" fxFlex="100%" fxFlex.gt-md="0 0 33%" fxFlex.gt-xs="0 0 50%" fxFlexOffset.gt-md="33%" fxFlexOffset.gt-xs="25%" >
+      <input matInput type="email" name="email" required [(ngModel)]="credentials.email">
+      <mat-label>Email</mat-label>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" fxFlex="100%" fxFlex.gt-md="0 0 33%" fxFlex.gt-xs="0 0 50%" fxFlexOffset.gt-md="33%" fxFlexOffset.gt-xs="25%" >
+      <input matInput type="password" name="pass" required [(ngModel)]="credentials.password">
+      <mat-label>Contraseña</mat-label>
+    </mat-form-field>
+
+    <button color="accent" mat-raised-button fxFlex="100%" fxFlex.gt-md="0 0 33%" fxFlex.gt-xs="0 0 50%" fxFlexOffset.gt-md="33%" fxFlexOffset.gt-xs="25%" (click)="login()">Entrar</button>
+
+  </div>
+</div>

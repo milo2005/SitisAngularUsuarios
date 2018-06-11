@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar class="container" color="primary">Usuarios</mat-toolbar>
-    <div class="section container">
+    <mat-toolbar color="primary"><span class="container-toolbar">Usuarios</span></mat-toolbar>
+    <div class="container">
       <router-outlet></router-outlet>
     </div>
   `

@@ -1,6 +1,39 @@
+<div class="breadcrumb mat-typography">
+  <a mat-button routerLink="/">Usuarios</a>>
+  <span>Agregar</span>
+</div>
+
 <mat-card>
   <mat-card-title>Agregar Usuario</mat-card-title>
   <mat-card-content>
-    
+
+    <div class="section">
+      <div fxLayout="row wrap" fxLayoutGap="16px">
+        <mat-form-field appearance="outline" fxFlex="0 0 100%" >
+          <input matInput type="text" name="nombre" [(ngModel)]="usuario.nombre">
+          <mat-label>Nombre</mat-label>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="0 0 100%">
+          <input matInput type="text" name="img" [(ngModel)]="usuario.img">
+          <mat-label>Imagen</mat-label>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="0 0 100%" fxFlex.gt-sm="0 0 calc(50% - 16px)">
+          <input matInput type="email" name="email" [(ngModel)]="usuario.email">
+          <mat-label>Email</mat-label>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="0 0 100%" fxFlex.gt-sm="0 0 calc(50% - 16px)">
+          <input matInput type="password" name="pass" [(ngModel)]="usuario.password">
+          <mat-label>Password</mat-label>
+        </mat-form-field>
+      </div>
+    </div>
+
   </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button routerLink="/">Cancelar</button>
+    <button mat-raised-button color="accent" (click)="add()">Aceptar</button>
+  </mat-card-actions>
 </mat-card>
